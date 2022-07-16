@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(219, 255, 215);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgb(219, 255, 215);
+  color: rgb(16, 130, 1);
+  font-family: "Heebo";
+}
+
+header {
+  width: 100%;
+  margin-bottom: 10px;
+}
+header .title {
+  border-radius: 5px;
+  padding: 0.4rem;
+  background-image: linear-gradient(to right, rgb(16, 130, 1), rgb(219, 255, 215));
+  color: rgb(219, 255, 215);
+  text-indent: 1rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.addItem {
+  width: 100%;
+}
+.addItem form {
+  display: flex;
+  align-items: center;
+}
+.addItem form input[type=text] {
+  width: calc(100% - 2rem);
+  height: 2rem;
+  font-size: 1.5rem;
+  border: 1px solid rgb(16, 130, 1);
+  border-radius: 5px;
+  margin-right: 5px;
+  outline: none;
+}
+.addItem form button {
+  display: flex;
+  align-items: center;
+  color: rgb(16, 130, 1);
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.addItem form button:hover {
+  color: rgba(16, 130, 1, 0.464);
+}
+.addItem form .addItemBtn {
+  width: 2rem;
+  height: 2rem;
+}
+
+.searchForm {
+  margin-top: 5px;
+  width: 100%;
+}
+.searchForm form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.searchForm form input {
+  width: 100%;
+  height: 2rem;
+  font-size: 1.5rem;
+  border: 1px solid rgb(16, 130, 1);
+  border-radius: 5px;
+  outline: none;
+}
+
+.listDiv {
+  width: 100%;
+}
+.listDiv .item {
+  display: flex;
+  align-items: center;
+  background-color: rgb(170, 250, 159);
+  font-size: 1.5rem;
+  border: 1px solid rgb(16, 130, 1);
+  margin: 10px 0px;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.listDiv .item input[type=checkbox] {
+  width: 2rem;
+  height: 2rem;
+}
+.listDiv .item label {
+  padding: 0 1rem;
+}
+.listDiv .item .btns {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.listDiv .item .btns button {
+  margin-left: 5px;
+  color: rgb(16, 130, 1);
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.listDiv .item .btns button:hover {
+  color: rgba(16, 130, 1, 0.464);
+}
+
+svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer {
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+}
+.footer .totalItem {
+  display: none;
+  font-size: 1.5rem;
+  background-color: rgb(16, 130, 1);
+  color: rgb(219, 255, 215);
+  border-radius: 5px;
+  width: 100%;
+  height: 2rem;
+}
+.footer a {
+  color: rgb(16, 130, 1);
+}
+.footer a:hover {
+  color: rgba(16, 130, 1, 0.464);
+}
+.footer .myName {
+  font-size: 0.5rem;
+}/*# sourceMappingURL=index.css.map */

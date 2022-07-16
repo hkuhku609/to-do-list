@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo');
+$main: rgb(16, 130, 1);
+$middle: rgb(170, 250, 159);
+$second: rgb(219, 255, 215);
+$mainA: rgba(16, 130, 1, 0.464);
+
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+@mixin widthHeight {
+  width: 2rem;
+  height: 2rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $second;
+}
+
+#root {
+  @include flexCol;
+}
+.App {
+  @include flexCol;
+  height: 100vh;
+  width: 100%;
+  max-width: 500px;
+  // border: 1px solid black;
+  background-color: $second;
+  color: $main;
+  font-family: 'Heebo';
+}
+header {
+  width: 100%;
+  margin-bottom: 10px;
+  .title {
+    border-radius: 5px;
+    padding: 0.4rem;
+    background-image: linear-gradient(to right, $main, $second);
+    color: $second;
+    text-indent: 1rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+}
+.addItem {
+  width: 100%;
+
+  form {
+    @include flex;
+    input[type='text'] {
+      width: calc(100% - 2rem);
+      height: 2rem;
+      font-size: 1.5rem;
+      border: 1px solid $main;
+      border-radius: 5px;
+      margin-right: 5px;
+      outline: none;
+    }
+    button {
+      @include flex;
+      color: $main;
+      @include widthHeight;
+      background-color: transparent;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.5rem;
+
+      cursor: pointer;
+      &:hover {
+        color: $mainA;
+      }
+    }
+    .addItemBtn {
+      @include widthHeight;
+    }
+  }
+}
+.searchForm {
+  margin-top: 5px;
+  width: 100%;
+  form {
+    @include flex;
+    width: 100%;
+    input {
+      width: 100%;
+      height: 2rem;
+      font-size: 1.5rem;
+      border: 1px solid $main;
+      border-radius: 5px;
+      outline: none;
+    }
+  }
+}
+.listDiv {
+  width: 100%;
+  .item {
+    @include flex;
+    background-color: $middle;
+    font-size: 1.5rem;
+    border: 1px solid $main;
+    margin: 10px 0px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    input[type='checkbox'] {
+      @include widthHeight;
+    }
+    label {
+      padding: 0 1rem;
+    }
+    .btns {
+      @include flex;
+      margin-left: auto;
+
+      button {
+        margin-left: 5px;
+        color: $main;
+        @include widthHeight;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+        &:hover {
+          color: $mainA;
+        }
+      }
+    }
+  }
+}
+svg {
+  @include widthHeight;
+}
+.footer {
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+  .totalItem {
+    display: none;
+    font-size: 1.5rem;
+    background-color: $main;
+    color: $second;
+    border-radius: 5px;
+    width: 100%;
+    height: 2rem;
+  }
+  a {
+    color: $main;
+    &:hover {
+      color: $mainA;
+    }
+  }
+  .myName {
+    font-size: 0.5rem;
+  }
+}
